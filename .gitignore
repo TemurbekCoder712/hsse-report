@@ -1,0 +1,38 @@
+# Node dependencies (Kutubxonalar)
+node_modules/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
+
+# Next.js build va production render fayllari
+.next/
+out/
+build/
+
+# Prisma (Ma'lumotlar bazasi migratsiyalari va lokal DB)
+# Agar SQLite ishlatayotgan bo'lsangiz, lokal bazani git-ga qo'shmaslik uchun:
+*.db
+*.db-journal
+
+# Muhit o'zgaruvchilari (Env fayllar - BAZA PAROLLARI VA API KALITLAR SHU YERDA BO'LADI!)
+.env
+.env.local
+.env.production
+.env.development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript builds va keshlar
+*.tsbuildinfo
+.eslintcache
+
+# Operatsion tizim tizimli fayllari
+.DS_Store
+Thumbs.db
+
+# Kod muharrirlari sozlamalari (Ixtiyoriy, lekin tavsiya etiladi)
+.vscode/
+.idea/
