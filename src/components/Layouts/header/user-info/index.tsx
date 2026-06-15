@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dropdown";
 import { signOut, useSession } from "@/lib/auth/auth-client";
 import { cn } from "@/lib/utils";
+import { useAuthStore } from "@/store/useAuthStore";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -22,8 +23,10 @@ export function UserInfo() {
 
   async function handleLogout() {
     setIsOpen(false);
-    toast.success("Logged out successfully");
-    router.push("/auth/sign-in");
+    await signOut();
+    useAuthStore.getState().clearAuth();
+    toast.success("Chiqish muvaffaqiyatli amalga oshdi");
+    router.replace("/auth/sign-in");
   }
 
   if (session.isPending) {
