@@ -34,6 +34,7 @@ export function StaffDonutChart(){
 
   return(
     <div className="rounded-xl border border-stroke bg-white p-6 shadow-sm dark:border-dark-3 dark:bg-gray-dark">
+      <div className="flex justify-between items-end mb-9">
       <div className="mb-4">
         <h2 className="text-lg font-bold text-dark dark:text-white">Hodimlar statistikasi</h2>
         <p className="mt-0.5 text-sm text-gray-500 dark:text-dark-6">Ishchilar va adminlar nisbati</p>
@@ -46,6 +47,7 @@ export function StaffDonutChart(){
             <span className="text-sm font-bold text-dark dark:text-white">{d.amount}</span>
           </div>
         ))}
+      </div>
       </div>
       <div className="flex justify-center">
         <Chart options={options} series={STAFF_DATA.map(d=>d.amount)} type="donut" width={320}/>
